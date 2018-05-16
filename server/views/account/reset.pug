@@ -2,7 +2,7 @@ extends ../layout
 
 block styles
 	// Site stylesheet
-	link(rel='stylesheet', href='/app/styles/frontend.css')
+	link(rel='stylesheet', type="text/html", href='/app/styles/frontend.css')
 
 block content
 	.center-container
@@ -14,7 +14,7 @@ block content
 					input(type='hidden', name='_csrf', value=_csrf)
 
 					header= t("ResetPasswordTitle")
-						
+
 					.form-group
 						label(for='password')= t("NewPassword")
 						input.form-control(type='password', name='password', id='password', placeholder=t("NewPassword"), autofocus, required)

@@ -129,7 +129,7 @@ function initI18N(app) {
 	let conf = {
 		//debug: true,
 		fallbackLng: "en",
-		whitelist: ["en", "hu"],
+		whitelist: ["en", "pt"],
 		ns: ["app", "frontend"],
 		defaultNS: "frontend",
 		load: "all",

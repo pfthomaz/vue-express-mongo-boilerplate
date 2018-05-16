@@ -25,8 +25,8 @@ body {
 	margin: 0;
 
 	font-weight: 400;
-	font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;	
+	// font-smooth: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	@if $glassTheme {
 		&::before {
