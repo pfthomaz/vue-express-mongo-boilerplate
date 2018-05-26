@@ -158,13 +158,13 @@ module.exports = function(app, db) {
 						else {
 							req.flash("error", { msg: req.t("UserSaveError") });
 							done(err, user);
-							return
+							return;
 						}
 						field = field.split(" dup key")[0];
 						field = field.substring(0, field.lastIndexOf("_"));						
 						if (field == "email")
 							req.flash("error", { msg: req.t("EmailIsExists") });
-						else 
+						else
 							req.flash("error", { msg: req.t("UsernameIsExists") });
 					}
 					done(err, user);
@@ -192,7 +192,7 @@ module.exports = function(app, db) {
 
 							done(null, user);
 						});
-					});	
+					});
 
 				} else {
 					// Send verification email
@@ -214,7 +214,7 @@ module.exports = function(app, db) {
 
 							done(err, user);
 						});
-					});					
+					});
 				}
 			}
 

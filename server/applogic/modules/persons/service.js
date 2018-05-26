@@ -1,13 +1,13 @@
 "use strict";
 
-let logger 		= require("../../../core/logger");
-let config 		= require("../../../config");
-let Sockets		= require("../../../core/sockets");
-let C 	 		= require("../../../core/constants");
+let logger = require("../../../core/logger");
+let config = require("../../../config");
+let Sockets = require("../../../core/sockets");
+let C = require("../../../core/constants");
 
-let _			= require("lodash");
+let _ = require("lodash");
 
-let User 		= require("./models/user");
+let User = require("./models/user");
 
 module.exports = {
 	settings: {
@@ -23,7 +23,7 @@ module.exports = {
 
 		modelPropFilter: "code username fullName avatar lastLogin roles"
 	},
-	
+
 	actions: {
 		// return all model
 		/*find: {
@@ -33,7 +33,7 @@ module.exports = {
 					return this.toJSON(docs);
 				})
 				.then((json) => {
-					return this.populateModels(json);					
+					return this.populateModels(json);
 				});
 			}
 		},*/
@@ -48,8 +48,7 @@ module.exports = {
 		}
 	},
 
-	methods: {
-	},
+	methods: {},
 
 	graphql: {
 
@@ -69,7 +68,7 @@ module.exports = {
 
 				posts(limit: Int, offset: Int, sort: String): [Post]
 			}
-		`,		
+		`,
 
 		mutation: `
 		`,
@@ -85,7 +84,9 @@ module.exports = {
 					let ctx = context.ctx;
 					let postService = ctx.services("posts");
 					if (postService)
-						return postService.actions.find(ctx.copy(Object.assign(args, { author: person.code })));
+						return postService.actions.find(ctx.copy(Object.assign(args, {
+							author: person.code
+						})));
 				}
 			}
 		}

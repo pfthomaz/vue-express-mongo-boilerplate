@@ -1,11 +1,11 @@
 "use strict";
 
-let logger 		= require("../core/logger");
-let config 		= require("../config");
-let C 	 		= require("../core/constants");
+let logger = require("../core/logger");
+let config = require("../config");
+let C = require("../core/constants");
 
-let nodemailer 	= require("nodemailer");
-let htmlToText 	= require("nodemailer-html-to-text").htmlToText;
+let nodemailer = require("nodemailer");
+let htmlToText = require("nodemailer-html-to-text").htmlToText;
 
 module.exports = {
 	settings: {
@@ -25,18 +25,16 @@ module.exports = {
 
 				// recipients can be a comma separated string or array which will be sent by the 'to' field
 				// recipients can also be an object with to, cc, bcc properties etc. See: 'Common fields' https://community.nodemailer.com/
-				let emailRecipients = {}
+				let emailRecipients = {};
 				if (recipients instanceof Object) {
-					if(recipients instanceof Array) {
-						emailRecipients.to = recipients
+					if (recipients instanceof Array) {
+						emailRecipients.to = recipients;
+					} else {
+						emailRecipients = recipients;
 					}
-					else {
-						emailRecipients = recipients
-					}
+				} else {
+					emailRecipients.to = recipients;
 				}
-				else {
-					emailRecipients.to = recipients
-				} 
 
 				let mailOptions = {
 					from: config.mailer.from,
@@ -50,8 +48,7 @@ module.exports = {
 				let transporter;
 				if (config.mailer.transport == "smtp") {
 					transporter = nodemailer.createTransport(config.mailer.smtp);
-				}
-				else if (config.mailer.transport == "mailgun") {
+				} else if (config.mailer.transport == "mailgun") {
 					let mg = require("nodemailer-mailgun-transport");
 					transporter = nodemailer.createTransport(mg({
 						auth: {
@@ -59,8 +56,7 @@ module.exports = {
 							domain: config.mailer.mailgun.domain
 						}
 					}));
-				}
-				else if (config.mailer.transport == "sendgrid") {
+				} else if (config.mailer.transport == "sendgrid") {
 					let sgTransport = require("nodemailer-sendgrid-transport");
 					transporter = nodemailer.createTransport(sgTransport({
 						auth: {
@@ -80,8 +76,7 @@ module.exports = {
 							resolve(info);
 						}
 					});
-				}
-				else 
+				} else
 					reject(new Error("Unable to send email! Invalid mailer transport: " + config.mailer.transport));
 
 			});

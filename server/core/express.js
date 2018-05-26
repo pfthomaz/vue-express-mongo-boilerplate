@@ -121,15 +121,16 @@ function initMiddleware(app) {
 
 /**
  * Initialize i18next module for localization
- * 
+ *
  * @param {any} app
  */
 function initI18N(app) {
 
 	let conf = {
 		//debug: true,
+		lng: "en",
 		fallbackLng: "en",
-		whitelist: ["en", "pt"],
+		whitelist: ["en", "pt", "hu"],
 		ns: ["app", "frontend"],
 		defaultNS: "frontend",
 		load: "all",
@@ -152,6 +153,10 @@ function initI18N(app) {
 	if (config.isTestMode()) {
 		conf.whitelist = ["en"];
 	}
+	// In test mode only English enabled!
+	// if (config.isDevMode()) {
+	// 	conf.whitelist = ["en"];
+	// }
 
 	i18next
 		.use(i18nextFs)
@@ -162,13 +167,13 @@ function initI18N(app) {
 				logger.warn(err);
 		});
 
-	/*i18next.on("languageChanged", function(lng) {
-		console.log("languageChanged", lng);
-	});
+	// i18next.on("languageChanged", function(lng) {
+	// 	console.log("languageChanged", lng);
+	// });
 
-	i18next.on("loaded", function(loaded) {
-		console.log("loaded", loaded);
-	});	*/
+	// i18next.on("loaded", function(loaded) {
+	// 	console.log("loaded", loaded);
+	// });
 
 	i18next.on("failedLoading", function(lng, ns, msg) {
 		console.log("failedLoading", lng, ns, msg);

@@ -1,0 +1,97 @@
+{
+	"Home": "Casa",
+	"Devices": "Dispositivos",
+	"Posts": "Postagens",
+	"Increment": "Aumentar",
+	"Decrement": "Reduzir",
+	"Logout": "Sair",
+
+	"Save": "Gravar",
+	"Cancel": "Cancelar",
+	"Clone": "Clonar",
+	"Delete": "Apagar",
+
+	"PostTitleCannotBeEmpty": "O título do post não pode ficar branco!",
+	"PostContentCannotBeEmpty": "O conteúdo do post não pode ficar branco!",
+	"PostNotFound": "Post não encontrado!",
+	"InvalidPostID": "Post ID inválido!",
+
+	"YouHaveAlreadyVotedThisPost": "Você já votou neste post!",
+	"YouHaveNotVotedThisPostYet": "Você ainda não votou neste post!",
+	"OnlyAuthorEditPost": "Apenas o autor pode editar este post!",
+	"OnlyAuthorDeletePost": "Apenas o autor pode excluir este post!",
+	"YouAreNotTheOwner": "Você não é o dono!",
+	
+
+	"DeviceAdded": "Dispositivo adicionado",
+	"DeviceUpdated": "Dispositivo atualizado",
+	"DeviceDeleted": "Dispositivo excluído",
+	"DeviceNotFound": "Dispositivo não encontrado!",
+
+	"DeviceNameAdded": "Dispositivo '{{data.name}}' adicionado por {{user.fullName}}!",
+	"DeviceNameUpdated": "Dispositivo '{{data.name}}' atualizado por {{user.fullName}}!",
+	"DeviceNameDeleted": "Dispositivo '{{data.name}}' excluído por {{user.fullName}}!",
+
+	"DeviceNameCannotBeBlank": "Nome do dispositivo não pode estar em branco!",
+
+	"UserNotFound": "Usuário não encontrado!",
+
+	"ID": "IDENTIDADE",
+	"Type": "Tipo",
+	"Address": "Endereço",
+	"Name": "Nome",
+	"Status": "Status",
+	"LastCommunication": "Última comunicação",
+	"willBeGenerated": "<será gerado>",
+	"DeviceName": "Nome do dispositivo",
+	"Description": "Descrição",
+	"AddressOfDevice": "Endereço do dispositivo",
+	"Active": "Ativo",
+	"Inactive": "Inativo",
+	"AddNewDevice": "Adicionar novo dispositivo",
+
+	"SelectedOfAll": "Selecionado {{selecionado}} de {{all}}",
+	"Search3dots": "Pesquisar ...",
+	
+	"Hot": "Quente",	
+	"MostViewed": "Mais visto",	
+	"New": "Novo",	
+	"NewPost": "Nova postagem",	
+	"AllPosts": "Todas as publicações",	
+	"MyPosts": "Minhas postagens",	
+	"ViewsCount": "Visualizações: {{count}}",	
+	"CreatedAgoByName": "Criado em {{ago}} por {{name}}",	
+	"EditedAgo": "Editado {{ago}}",	
+	"EditPost": "Editar post",	
+	"DeletePost": "Apague a postagem",	
+	"Title": "Título",	
+	"TitleOfPost": "Título do post",	
+	"Content": "Conteúdo",	
+	"ContentOfPost": "Conteúdo do post",	
+    "Voters": "Eleitores",
+    "LoadMore": "Carregue mais...",
+
+	"PostAdded": "Post adicionado",
+	"PostUpdated": "Post atualizado",
+	"PostDeleted": "Publicar excluído",
+
+	"PostNameAdded": "Postar '{{data.title}}' adicionado por {{user.fullName}}! ",
+	"PostNameUpdated": "Postar '{{data.title}}' atualizado por {{user.fullName}}!",
+	"PostNameDeleted": "Postar '{{data.title}}' excluído por {{user.fullName}}!",
+	"PostNameVoted": "Postar '{{data.title}}' votado por {{user.fullName}}!",
+	"PostNameUnvoted": "Postar '{{data.title}}' não votado por {{user.fullName}}! ",
+
+	"InvalidCode": "Código inválido!",
+
+	"Demo": "Demo",
+
+	"General": "Geral",
+	"Profile": "Perfil",
+	"MyAccount": "Minha conta",
+	"Settings": "Configurações",
+	"Notifications": "Notificações",
+	"Messages": "Mensagens",
+	"MarkAllAsRead": "Marcar tudo como lido",
+	"SeeAllNotifications": "Veja todas as notificações",
+	"SeeAllMessages": "Veja todas as mensagens"
+}
